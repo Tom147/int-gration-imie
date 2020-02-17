@@ -1,0 +1,560 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+@font-face {
+	font-family: 'Zona_Black';
+	src: url(../font/Zona_Black.ttf);
+}
+
+/*--------------------------------------------*/
+/*					<HEADER>      			  */
+/*--------------------------------------------*/
+header {
+	display: flex;
+	background-color: transparent;	/* Viens mettre le background transparent pour pouvoir voir l'image*/
+	z-index: 1;						/*Place le header au dessus de la page home sur l'axe z pour par la suite pouvoir remonter l'image de fond sans le cacher header*/
+}
+a {
+	display: inline-flex;		/*Met les balises 'a' sur une seule line*/
+	color: white;
+	text-decoration: none;	
+	font-family: 'Zona_Black';
+	padding-right:15px; 
+}
+.right:hover {
+	 color: #cc2b50;
+	 transition-duration: 0.7s;	/*Durée de la transistion*/
+}
+
+#logo {
+	padding: 10px 600px 0px 200px;
+	text-transform: uppercase;
+}
+
+header span {
+	color: #cc2b50;
+}
+/*--------------------------------------------*/
+/*					</HEADER>      			  */
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+/*					<HOME>      			  */
+/*--------------------------------------------*/
+#home_Page {
+	margin-top: -90px;				/*Viens placer 'Home_Page' en dessous du header qui a une couche sur l'axe z supèrieur*/
+	padding-top: 80px;
+	background: url('../img/Dark-Wallpapers.jpg');
+	background-size: cover;
+	width: 100%;
+	height: 650px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;			/* aligne sur l'axe y le contenu */
+	justify-content: center;		/* aligne sur l'axe x le contenu */
+}
+
+#homeInfo {			
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: 50%;
+	color: white;
+}
+
+h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: lighter;
+	text-transform: uppercase;
+}
+
+h1:after {
+	content:'';
+	display:inline-block;
+	width:40%;
+	border-bottom:2px solid #cc2b50;
+}
+
+#homeInfo h1 span {
+	font-family: 'Zona_Black', serif, sans-serif;
+	color: white;
+	text-transform: uppercase;
+}
+
+#homeInfo, p{
+	font-family: 'Montserrat', sans-serif;
+	text-transform: lowercase;
+	line-height: 25px;			/*espace entre les lignes de paragraphes contenu dans la balise <p>*/
+}
+
+#showbutton {
+	margin-top: 40px;
+	background-color: #cc2b50; 
+	border-radius: 20px;
+	border: none;				/*Enlèves les bordures*/
+	cursor: pointer;
+	color: white;
+	padding: 10px 25px;
+	font-size: 13px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#showbutton:hover {
+	background-color: white; 
+	color: #cc2b50;
+	transition-duration: 0.7s;
+}
+/*--------------------------------------------*/
+/*					</HOME>      			  */
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+/*					<SERVICE>      			  */
+/*--------------------------------------------*/
+#ourServices_Page {
+	text-align: center;
+	background-color: #f2f2f2;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	display: flex;
+	flex-direction: column;			/*Mets les élements en colonne*/
+	align-items: center;
+}
+
+h2 {
+	color: grey;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: lighter;
+}
+
+h2:after {
+  content:'';
+  display:inline-block;
+  width:90%;
+  border-bottom:2px solid #cc2b50;
+}
+
+#ourServices_Page p {
+	color: grey;
+}
+
+#ourServices_Page #service{ 
+	padding-top: 55px;
+	display: inline-flex;		/* Aligne img + p sur une ligne */
+}
+
+#ourServices_Page #service img{
+	width: 35%;
+	border-style: solid;
+	border-radius: 80px;
+	color: #bdbdbd;
+	padding: 20px;
+}
+
+#service p {
+	color: #cc2b50;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+/*--------------------------------------------*/
+/*					</SERVICE>      		  */
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+/*					<QUOTE>      		  	  */
+/*--------------------------------------------*/
+#quote_Page {
+	background: url('../img/testimonial.jpg');
+	background-position: center;			/* Position de l'image centrer*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#quote_Page p {
+	text-align: center;
+	color: white;
+}
+
+#quote_Page #quoteUp {
+	width: 5%;
+	padding-top: 80px;
+	padding-bottom: 30px;
+}
+
+#quote_Page #quoteDown {
+	width: 5%;
+	padding-top: 30px;
+	padding-bottom: 80px;
+}
+/*--------------------------------------------*/
+/*					</QUOTE>      		  	  */
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+/*					<PRICES>      		  	  */
+/*--------------------------------------------*/
+#checkOurPrice_Page {
+	text-align: center;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background-color: #f2f2f2;
+	display: flex;
+	justify-content: center;
+	align-items:  center;
+	flex-direction: column;
+}
+
+#checkOurPrice_Page #introPrice {
+	width: 50%;
+	padding-bottom: 70px;
+	line-height: 30px;
+}
+
+#tarif {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	flex-wrap: wrap;		/*Descends les 'block de prix' quand il n'y a plus de place en réduisant l'écran*/
+}
+
+#tarif1, #tarif2, #tarif3, #tarif4{
+	background-color: white;
+	margin: 0px 20px;
+	padding: 0px 25px 15px 25px;
+}
+
+
+#priceTarif {
+	background-color: #575757;
+	margin: -16px -25px;
+	color: white;
+}
+
+#tarif1:hover #priceTarif, #tarif2:hover #priceTarif, #tarif3:hover #priceTarif, #tarif4:hover #priceTarif {
+	background-color: #cc2b50;		/*Change le 'background-color' quand l'on passe le curseur dessus*/
+}
+
+#priceTarif .priceTXT {
+	padding: 20px 20px 40px 20px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.number {
+	font-size: 35px;
+	font-weight: bold;
+	color: white;
+}
+
+
+.fakeButton {
+	position: absolute;
+	background-color: #f2f2f2;
+	border-radius: 20px;
+	margin: -20px 0px 0px 0px;
+	width: 170px;
+	height: 40px
+}
+.fakeButton p{
+	margin: 5px 0px 0px 0px;
+	font-weight: bold;
+	color: #575757;
+}
+
+.priceInfo p{
+	color: grey;
+}
+
+.up {
+	padding-top: 50px;
+}
+
+#tarif button {
+	margin-top: 20px;
+	background-color: #cc2b50;
+	color: white;
+	border: none;
+	border-radius: 20px;
+	padding: 10px 25px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+#tarif button:hover {
+	background-color: #575757;
+}
+/*--------------------------------------------*/
+/*					</PRICES>      		  	  */
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+/*					<INFO>      		  	  */
+/*--------------------------------------------*/
+#info_Page {
+	text-align: center;
+}
+
+.info {
+	width: 20%;
+	display: flex;
+	margin: 0px 10px;
+	flex-wrap: wrap;
+}
+
+.info h3 {
+	color: #cc2b50;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase; 
+	font-size: 14px;
+	padding-left: 60px;
+}
+
+.info p {
+	text-align: left;
+	color: grey;
+	padding-left: 60px; 
+}
+
+#infoLine1 {
+	display: inline-flex;
+	justify-content: center;
+	margin: 100px 0px 70px 0px;
+	flex-direction: row; 
+}
+
+.infoPic {
+	display: flex;
+	flex-direction: row;
+	height: 30%;
+}
+
+.infoPH {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;  /* colle le h3 + p du coté de img*/
+	margin:-20px 0px; 
+	padding-left: 20px;
+}
+
+#infoLine2 {
+	display: inline-flex;
+	justify-content: center;
+	margin-bottom: 80px;
+}
+/*--------------------------------------------*/
+/*					</INFO>      		  	  */
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+/*					<PINKBANNER>      		  */
+/*--------------------------------------------*/
+#pink_Page{
+	background-color: #cc2b50;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+#pink_Page div {
+	display: inline-flex;	/* Mets les élements sur une ligne*/
+	justify-content: center;
+	align-items: center;
+}
+
+#pink_Page p {
+	color: white;
+	text-transform: uppercase;
+	padding: 30px;
+	font-size: 25px;
+}
+
+#pink_Page button{
+	color: #cc2b50;
+	background-color: white;
+	border-radius: 20px;
+	border:none;
+	padding: 10px 35px;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;		/*Change le curseur en 'mode pointer'*/
+}
+
+#pink_Page button:hover {
+	background-color: #cc2b50; 
+	color: white;
+	transition-duration: 0.7s;
+	border:2px solid white;			/*Ajoute une bordure de 2px de couleur blanche quand le curseur vient pointer sur le boutton*/
+}
+/*--------------------------------------------*/
+/*					</PINKBANNER>      		  */
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+/*					<UPDATE>      		  	  */
+/*--------------------------------------------*/
+#ourLatestUpdates_Page {
+	font-family: 'Montserrat', serif, sans-serif;
+	text-align: center;
+	display: flex;
+	background-color: #f2f2f2;
+	justify-content: center;
+	align-items: center;
+	padding: 100px 0px;
+	flex-wrap: wrap;
+}
+
+#introUpdate {
+	width: 40%;
+	margin-bottom: 70px;
+	text-align: center;
+}
+
+#UpdatesPageLine1, #UpdatesPageLine2 {
+	display: flex;
+	justify-content: center;
+}
+
+#UpdatesPageLine2{
+	margin: 40px 0px;
+}
+.updates {
+	background-color: #e0e0e0;
+	justify-content: center;
+	width: 20%;
+	margin: 0px 20px;
+}
+
+#ourLatestUpdates_Page img {
+	width: 304px;
+	height: 200px;
+	border-bottom: 8px solid #cc2b50;
+}
+
+#ourLatestUpdates_Page h3 {
+	text-transform: uppercase;
+	font-size: 14px;
+	text-align: left;
+	padding-left: 15px;
+	color: #525252;
+}
+
+#ourLatestUpdates_Page p {
+	color: grey;
+	text-align: left;
+	padding-left: 15px;
+	font-size: 12px;
+}
+/*--------------------------------------------*/
+/*					</UPDATE>      		  	  */
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+/*					<TEMPLATE>      		  */
+/*--------------------------------------------*/
+#template_Page {
+	background: url('../img/post.jpg');
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 80px 0px;
+}
+
+#template_Page h2 {
+	text-align: center;
+	color: white;
+	font-weight: lighter;
+}
+
+#template_Page p {
+	text-align: center;
+	color: white;
+	width: 40%;
+	font-size: 12px;
+	margin-bottom: 40px;
+}
+
+#template_Page button {
+	border-radius: 20px;
+	border: none;
+	background-color: #cc2b50;
+	color: white;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 15px 35px;
+}
+
+#template_Page button:hover {
+	background-color: white; 
+	color: #cc2b50;
+	transition-duration: 0.7s;
+}
+
+/*--------------------------------------------*/
+/*					</TEMPLATE>      		  */
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+/*					<DOWNLOAD>      		  */
+/*--------------------------------------------*/
+#download_Page {
+	display: flex;
+	justify-content: center;
+	background-color: #f2f2f2;
+	padding: 40px 0px;
+}
+
+#download_Page img {
+	width: 40%;
+	margin-right: 50px;
+}
+
+#download_Page div {
+	width: 25%;
+}
+
+#download_Page button {
+	margin-top: 30px;
+	border-radius: 20px;
+	border: none;
+	background-color: #cc2b50;
+	color: white;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 15px 35px;
+}
+
+#download_Page button:hover {
+	background-color: white; 
+	color: #cc2b50;
+	transition-duration: 0.7s;
+	border:2px solid #cc2b50;
+}
+/*--------------------------------------------*/
+/*					</DOWNLOAD>      		  */
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+/*					<FOOTER>      		  	  */
+/*--------------------------------------------*/
+footer {
+	background-color: #2d2d2d;
+	color: white;
+	display: inline-flex;
+	width: 100%;
+	height: 100px;
+	justify-content: space-around;
+	align-items: center;
+}
+
+footer p {
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+footer span {
+	color: #cc2b50;
+}
+/*--------------------------------------------*/
+/*					</FOOTER>      		  	  */
+/*--------------------------------------------*/
+/*benjamin.maas-2@imie.fr
+/
